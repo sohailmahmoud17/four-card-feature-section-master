@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-direction: border-box;
+    -moz-bix-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Very-Light-Gray);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+/* the header */
+header {
+    text-align: center;
+}
+header h1:first-child {
+    font-weight: 400;
+    font-size: 29px;
+}
+header h1:last-of-type {
+    color: var(--Very-Dark-Blue);
+}
+header p {
+    width: 500px;
+    margin: 1rem 0 3rem 0;
+    line-height: 1.5;
+}
+/* the main container */
+main {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);;
+    gap: 30px;
+}
+p, header h1:first-child {
+    color: var(--Grayish-Blue);
+}
+main div {
+    box-shadow: 0 0 20px var(--Grayish-Blue);
+    margin-bottom: 0.5rem;
+    background-color: white;
+    width: 350px;
+    height: 260px;
+    padding: 1.8rem;
+    border-radius: 0.5rem;
+    position: relative;
+}
+main h2 {
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 0.5rem;
+}
+main p {
+    line-height: 1.7;
+    width: 300px;
+}
+main img {
+    position: absolute;
+    left: 73%;
+    bottom: 20px;
+}
+.supervisor {
+    border-top: 4px solid var(--Cyan);
+    grid-area: 2 / 1 / 4 / 2;
+}
+.team {
+    border-top: 4px solid var(--Red);
+    grid-area: 1 / 2 / 3 / 3;
+}
+.karma {
+    border-top: 4px solid var(--Orange);
+    margin-top: -10px;
+    grid-area: 3 / 2 / 5 / 3;
+}
+.calculator {
+    border-top: 4px solid var(--Blue);
+    grid-area: 2 / 3 / 4 / 4;
+}
+@media (max-width: 425px) {
+    body {
+        max-width: 415px;
+    }
+    header h1:first-child {
+        font-size: 23px;
+    }
+    header h1:last-of-type {
+        font-size: 24px;
+    }
+    header p {
+        width: 310px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+}
